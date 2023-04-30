@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let collectionOfBooks = [];
 
   // Display Real-time Date and time on web page.
-  
   function displayTime() {
     const dateAndTime = new Date();
     let completeDateAndTime = '';
