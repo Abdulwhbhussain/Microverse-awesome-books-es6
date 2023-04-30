@@ -1,207 +1,206 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-  
-    /* height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+
+  /* height: 100vh;
     position: relative; */
-  }
-  
-  #date-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    width: 85%;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  
-    /* background-color: #7e9a9a; */
-  }
-  
-  .container {
-    width: 90%;
-  
-    /* background-color: burlywood; */
-  
-    /* border-radius: 20px; */
-  
-    /* padding: 2%; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
-    /* border: 2px solid black; */
-    padding-top: 35px;
-    padding-bottom: 35px;
-  }
-  
-  input {
-    margin-bottom: 40px;
-    width: 400px;
-    border: 2px solid black;
-    height: 30px;
-  }
-  
-  button {
-    margin-bottom: 10px;
-    border-radius: 2px;
-    padding: 1px 10px;
-  }
-  
-  h2,
-  h1,
-  h3 {
-    padding: 0%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .book-list-container {
-    width: 90%;
-  }
-  
-  #book-list {
-    list-style: none;
-    padding: 0%;
-    margin: 0%;
-  }
-  
-  .book-list {
-    border: 2px solid black;
-    width: 100%;
-    padding: 0%;
-  }
-  
-  .book-list-container h1 {
-    font-size: 50px;
-    margin-bottom: 50px;
-  }
-  
-  .book-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .book-form h2 {
-    font-size: 50px;
-    margin-bottom: 50px;
-  }
-  
-  li {
-    height: 50px;
-  }
-  
-  .contact-detail {
-    height: auto;
-  }
-  
-  #contact-details {
-    margin-bottom: 85px;
-  }
-  
-  #contact-info {
-    height: auto;
-  }
-  
-  #contact-info h1 {
-    font-size: 50px;
-    margin-bottom: 50px;
-  }
-  
-  #contact-info p {
-    font-size: 25px;
-  }
-  
-  .book-item-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  #button-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-bottom: 50px;
-    font-size: 20px;
-  }
-  
-  .book-item {
-    margin: 0%;
-    padding: 0 10px;
-    line-height: 60px;
-  }
-  
-  .book-item:nth-of-type(odd) {
-    background-color: #7e9a9a;
-  }
-  
-  .book-item:nth-of-type(even) {
-    background-color: #db9833;
-  }
-  
-  header {
-    margin-top: 20px;
-    padding: 0% 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #7e9a9a;
-    border: 2px solid black;
-    width: 80%;
-    height: 50px;
-  }
-  
-  #navigation-menu {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  header ul li {
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
-  header ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
-  footer {
-    margin-top: 20px;
-    padding: 0% 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #7e9a9a;
-    border: 2px solid black;
-    width: 80%;
-    height: 50px;
-  }
-  
-  .vertical-line {
-    width: 2px;
-    height: 40px;
-    background-color: black;
-  }
-  
-  a:hover {
-    cursor: pointer;
-  }
-  
+}
+
+#date-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 85%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  /* background-color: #7e9a9a; */
+}
+
+.container {
+  width: 90%;
+
+  /* background-color: burlywood; */
+
+  /* border-radius: 20px; */
+
+  /* padding: 2%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* border: 2px solid black; */
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+input {
+  margin-bottom: 40px;
+  width: 400px;
+  border: 2px solid black;
+  height: 30px;
+}
+
+button {
+  margin-bottom: 10px;
+  border-radius: 2px;
+  padding: 1px 10px;
+}
+
+h2,
+h1,
+h3 {
+  padding: 0%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.book-list-container {
+  width: 90%;
+}
+
+#book-list {
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+}
+
+.book-list {
+  border: 2px solid black;
+  width: 100%;
+  padding: 0%;
+}
+
+.book-list-container h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-form h2 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+li {
+  height: 50px;
+}
+
+.contact-detail {
+  height: auto;
+}
+
+#contact-details {
+  margin-bottom: 85px;
+}
+
+#contact-info {
+  height: auto;
+}
+
+#contact-info h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+#contact-info p {
+  font-size: 25px;
+}
+
+.book-item-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.book-item {
+  margin: 0%;
+  padding: 0 10px;
+  line-height: 60px;
+}
+
+.book-item:nth-of-type(odd) {
+  background-color: #7e9a9a;
+}
+
+.book-item:nth-of-type(even) {
+  background-color: #db9833;
+}
+
+header {
+  margin-top: 20px;
+  padding: 0% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7e9a9a;
+  border: 2px solid black;
+  width: 80%;
+  height: 50px;
+}
+
+#navigation-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header ul li {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 0% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7e9a9a;
+  border: 2px solid black;
+  width: 80%;
+  height: 50px;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 40px;
+  background-color: black;
+}
+
+a:hover {
+  cursor: pointer;
+}
