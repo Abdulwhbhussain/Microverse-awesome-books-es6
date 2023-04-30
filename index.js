@@ -1,34 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // A collection that keeps a list of books.
-    const bookList = document.querySelector('#book-list');
-    let collectionOfBooks = [];
-  
+  // A collection that keeps a list of books.
+  const bookList = document.querySelector('#book-list');
+  let collectionOfBooks = [];
+
     // Display Real-time Date and time on web page.
   
-    function displayTime() {
-      const dateAndTime = new Date();
-      let completeDateAndTime = '';
-      completeDateAndTime += dateAndTime.toLocaleDateString();
-      completeDateAndTime += ',  ';
-      completeDateAndTime += dateAndTime.toLocaleTimeString();
-      completeDateAndTime = completeDateAndTime.replaceAll('/', ' ');
-      completeDateAndTime = completeDateAndTime.split(' ');
-      const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-      completeDateAndTime[0] = month[completeDateAndTime[0] - 1];
-      if (completeDateAndTime[1] > 3) {
-        completeDateAndTime[1] = `${completeDateAndTime[1]}th`;
-      }
-      if (completeDateAndTime[1] === 3) {
-        completeDateAndTime[1] = `${completeDateAndTime[1]}rd`;
-      }
-      if (completeDateAndTime[1] === 2) {
-        completeDateAndTime[1] = `${completeDateAndTime[1]}nd`;
-      }
-      if (completeDateAndTime[1] === 1) {
-        completeDateAndTime[1] = `${completeDateAndTime[1]}st`;
-      }
-      completeDateAndTime = completeDateAndTime.join(' ');
-      document.getElementById('date-container').innerText = completeDateAndTime;
+  function displayTime() {
+    const dateAndTime = new Date();
+    let completeDateAndTime = '';
+    completeDateAndTime += dateAndTime.toLocaleDateString();
+    completeDateAndTime += ',  ';
+    completeDateAndTime += dateAndTime.toLocaleTimeString();
+    completeDateAndTime = completeDateAndTime.replaceAll('/', ' ');
+    completeDateAndTime = completeDateAndTime.split(' ');
+    const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    completeDateAndTime[0] = month[completeDateAndTime[0] - 1];
+    if (completeDateAndTime[1] > 3) {
+      completeDateAndTime[1] = `${completeDateAndTime[1]}th`;
+    }
+    if (completeDateAndTime[1] === 3) {
+      completeDateAndTime[1] = `${completeDateAndTime[1]}rd`;
+    }
+    if (completeDateAndTime[1] === 2) {
+      completeDateAndTime[1] = `${completeDateAndTime[1]}nd`;
+    }
+    if (completeDateAndTime[1] === 1) {
+      completeDateAndTime[1] = `${completeDateAndTime[1]}st`;
+    }
+    completeDateAndTime = completeDateAndTime.join(' ');
+    document.getElementById('date-container').innerText = completeDateAndTime;
     }
   
     setInterval(displayTime, 1000);
