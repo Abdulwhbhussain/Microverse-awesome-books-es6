@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const bookList = document.querySelector('#book-list');
   let collectionOfBooks = [];
 
-    // Display Real-time Date and time on web page.
+  // Display Real-time Date and time on web page.
   
   function displayTime() {
     const dateAndTime = new Date();
