@@ -1,0 +1,3 @@
+const titleInput = document.querySelector('#title')
+
+export default titleInput;

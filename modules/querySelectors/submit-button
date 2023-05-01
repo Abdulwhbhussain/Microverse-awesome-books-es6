@@ -1,0 +1,3 @@
+const submitButton = document.querySelector('#submit-btn');
+
+export { submitButton as default };

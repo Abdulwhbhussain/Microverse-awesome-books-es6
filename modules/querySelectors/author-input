@@ -1,0 +1,3 @@
+const authorInput = document.querySelector('#author')
+
+export default authorInput;
