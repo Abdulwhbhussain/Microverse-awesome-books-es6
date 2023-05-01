@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Display Real-time Date and time on web page.
   setInterval(displayTime, 1000);
-  
-  listSection;
+  listSection();
 
   document.querySelector('#list-link').addEventListener('click', listSection);
 
