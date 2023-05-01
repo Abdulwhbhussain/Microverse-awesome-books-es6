@@ -1,5 +1,5 @@
 // import { displayTime } from "./modules/display-time";
-import { DateTime } from "./node_modules/luxon/src/luxon.js";
+import { DateTime } from './node_modules/luxon/src/luxon.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // A collection that keeps a list of books.
@@ -8,43 +8,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Display Real-time Date and time on web page.
   setInterval(() => {
-      let completeDateAndTime = '';
+    let completeDateAndTime = '';
 
-      const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-      completeDateAndTime += month[DateTime.now().c.month - 1];
-      completeDateAndTime += ' ';
-      if (DateTime.now().c.day > 3) {
-        completeDateAndTime += `${DateTime.now().c.day}th`;
-      }
-      if (DateTime.now().c.day === 3) {
-        completeDateAndTime += `${DateTime.now().c.day}rd`;
-      }
-      if (DateTime.now().c.day === 2) {
-        completeDateAndTime += `${DateTime.now().c.day}nd`;
-      }
-      if (DateTime.now().c.day === 1) {
-        completeDateAndTime += `${DateTime.now().c.day}st`;
-      }
-      completeDateAndTime += ' ';
-      completeDateAndTime += DateTime.now().c.year;
-      completeDateAndTime += ',  ';
-      completeDateAndTime += DateTime.now().c.hour;
-      completeDateAndTime += ':';
-      if (DateTime.now().c.minute < 10) {
-        completeDateAndTime += '0';
-      }
-      completeDateAndTime += DateTime.now().c.minute;
-      completeDateAndTime += ':';
-      if (DateTime.now().c.second < 10) {
-        completeDateAndTime += '0';
-      }
-      completeDateAndTime += DateTime.now().c.second;
-      completeDateAndTime += ' ';
-      completeDateAndTime += DateTime.now().c.hour > 12 ? 'pm' : 'am';
+    completeDateAndTime += month[DateTime.now().c.month - 1];
+    completeDateAndTime += ' ';
+    if (DateTime.now().c.day > 3) {
+      completeDateAndTime += `${DateTime.now().c.day}th`;
+    }
+    if (DateTime.now().c.day === 3) {
+      completeDateAndTime += `${DateTime.now().c.day}rd`;
+    }
+    if (DateTime.now().c.day === 2) {
+      completeDateAndTime += `${DateTime.now().c.day}nd`;
+    }
+    if (DateTime.now().c.day === 1) {
+      completeDateAndTime += `${DateTime.now().c.day}st`;
+    }
+    completeDateAndTime += ' ';
+    completeDateAndTime += DateTime.now().c.year;
+    completeDateAndTime += ',  ';
+    completeDateAndTime += DateTime.now().c.hour;
+    completeDateAndTime += ':';
+    if (DateTime.now().c.minute < 10) {
+      completeDateAndTime += '0';
+    }
+    completeDateAndTime += DateTime.now().c.minute;
+    completeDateAndTime += ':';
+    if (DateTime.now().c.second < 10) {
+      completeDateAndTime += '0';
+    }
+    completeDateAndTime += DateTime.now().c.second;
+    completeDateAndTime += ' ';
+    completeDateAndTime += DateTime.now().c.hour > 12 ? 'pm' : 'am';
 
-      document.getElementById('date-container').innerText = completeDateAndTime;
-    }, 1000);
+    document.getElementById('date-container').innerText = completeDateAndTime;
+  }, 1000);
   
   document.querySelector('#list-link').style.textDecoration = 'underline';
   document.querySelector('.book-list-container').style.display = 'Block';
