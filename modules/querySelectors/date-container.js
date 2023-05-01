@@ -1,3 +1,3 @@
-const dateContainer = document.getElementById('date-container')
+const dateContainer = document.getElementById('date-container');
 
-export { dateContainer };
+export { dateContainer as default };

@@ -1,4 +1,4 @@
-import { displayTime } from './modules/display-time.js';
+import displayTime from './modules/display-time.js';
 import { listSection, addSection, contactSection } from './modules/sections.js';
 
 document.addEventListener('DOMContentLoaded', () => {

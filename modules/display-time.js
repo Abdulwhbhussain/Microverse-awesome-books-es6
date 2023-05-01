@@ -1,4 +1,4 @@
-import { dateContainer } from './querySelectors/date-container.js';
+import dateContainer from './querySelectors/date-container.js';
 import { DateTime } from '../node_modules/luxon/src/luxon.js';
 
 const displayTime = () => {
@@ -38,6 +38,6 @@ const displayTime = () => {
   completeDateAndTime += DateTime.now().c.hour > 12 ? 'pm' : 'am';
 
   dateContainer.innerText = completeDateAndTime;
-}
+};
 
-export { displayTime };
+export default displayTime;
