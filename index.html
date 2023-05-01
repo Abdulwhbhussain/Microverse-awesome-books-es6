@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="./index.css">
+    <title>Awesome Books</title>
+</head>
+
+<body>
+    <header>
+        <h2>Awesome Books</h2>
+        <ul id="navigation-menu">
+            <li><a id="list-link">List</a></li>
+            <span class="vertical-line"></span>
+            <li><a id="add-link">Add new</a></li>
+            <span class="vertical-line"></span>
+            <li><a id="contact-link">Contact</a></li>
+        </ul>
+    </header>
+    <h3 id="date-container"></h3>
+    
+    <div class="container">
+        <section class="book-list-container"><center><h1>All awesome Books</h1></center>
+            
+            <div class="book-list">
+                <ul id="book-list">
+    
+                </ul>
+            </div></section>
+        
+        
+        <section class="book-form">
+            <h2>Add a new book</h2>
+            <form id="book-form">
+                <input type="text" id="title" placeholder="Book Title">
+                <br>
+                <input type="text" id="author" placeholder="Book Author">
+                <br>
+                <div id="button-div"><button type="submit" id="submit-btn">Add</button></div>
+            </form>
+        
+        
+        
+        </section>
+
+        <section id="contact-info">
+            <center><h1>Contact information</h1></center>
+            <p>Do you have any questions or just want to say "Hello"?</p>
+            <p>You can reach out to us!</p>
+
+            <ul id="contact-details">
+                <li class="contact-detail"><span>Our Email: </span> mail@mail.com</li>
+                <li class="contact-detail"><span>Our phone number: </span>0043586534422</li>
+                <li class="contact-detail"><span>Our address: </span> Streetname 22, 84503 City, Country</li>
+            </ul>
+
+        </section>
+        
+
+    </div>
+    <footer>
+        <h3>Copyright</h3>
+        <p id="last-paragraph">&copy; 2023 Awesome Books</p>
+    </footer>
+    <!-- Link to The Javascript File -->
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
