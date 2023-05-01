@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     completeDateAndTime = completeDateAndTime.join(' ');
     document.getElementById('date-container').innerText = completeDateAndTime;
   }
-  setInterval(displayTime, 1000);  
+  setInterval(displayTime, 1000);
   document.querySelector('#list-link').style.textDecoration = 'underline';
   document.querySelector('.book-list-container').style.display = 'Block';
   document.querySelector('#add-link').style.textDecoration = 'none';
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function bookOnHtmlPageRemove() {
     document.querySelectorAll('.book-item').forEach((book) => {
-    book.remove();
+      book.remove();
     });
   }
   if (!localStorage.getItem('collectionOfBooks')) {
