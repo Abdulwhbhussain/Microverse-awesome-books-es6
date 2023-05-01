@@ -29,46 +29,37 @@ document.addEventListener('DOMContentLoaded', () => {
     completeDateAndTime = completeDateAndTime.join(' ');
     document.getElementById('date-container').innerText = completeDateAndTime;
   }
-  setInterval(displayTime, 1000);
-  
+  setInterval(displayTime, 1000);  
   document.querySelector('#list-link').style.textDecoration = 'underline';
   document.querySelector('.book-list-container').style.display = 'Block';
-  
   document.querySelector('#add-link').style.textDecoration = 'none';
   document.querySelector('#contact-link').style.textDecoration = 'none';
   document.querySelector('.book-form').style.display = 'none';
   document.querySelector('#contact-info').style.display = 'none';
-  
   document.querySelector('#list-link').addEventListener('click', () => {
     document.querySelector('#list-link').style.textDecoration = 'underline';
     document.querySelector('.book-list-container').style.display = 'Block';
-  
     document.querySelector('#add-link').style.textDecoration = 'none';
     document.querySelector('#contact-link').style.textDecoration = 'none';
     document.querySelector('.book-form').style.display = 'none';
     document.querySelector('#contact-info').style.display = 'none';
   });
-  
   document.querySelector('#add-link').addEventListener('click', () => {
     document.querySelector('#add-link').style.textDecoration = 'underline';
     document.querySelector('.book-form').style.display = 'flex';
-  
     document.querySelector('#list-link').style.textDecoration = 'none';
     document.querySelector('#contact-link').style.textDecoration = 'none';
     document.querySelector('.book-list-container').style.display = 'none';
     document.querySelector('#contact-info').style.display = 'none';
   });
-  
   document.querySelector('#contact-link').addEventListener('click', () => {
     document.querySelector('#contact-link').style.textDecoration = 'underline';
     document.querySelector('#contact-info').style.display = 'Block';
-  
     document.querySelector('#list-link').style.textDecoration = 'none';
     document.querySelector('#add-link').style.textDecoration = 'none';
     document.querySelector('.book-list-container').style.display = 'none';
     document.querySelector('.book-form').style.display = 'none';
   });
-  
   function bookOnHtmlPage(books) {
     books.forEach((book, id) => {
       const bookItem = document.createElement('li');
@@ -77,14 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
       bookItem.innerHTML = `<div class='book-item-div'>
       <div><span><b>'${book.title}'</b></span> <span> by </span>
       <span>${book.author}</span></div>
-      
       <button id=remove-btn-${id} class='remove-btn'>Remove</button>
       </div>
       `;
       bookList.appendChild(bookItem);
     });
   }
-  
   // Remove a book from the collection.
   function removeFunction() {
     if (collectionOfBooks.length > 0) {
@@ -98,13 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
-  
   function bookOnHtmlPageRemove() {
     document.querySelectorAll('.book-item').forEach((book) => {
     book.remove();
     });
   }
-  
   if (!localStorage.getItem('collectionOfBooks')) {
     localStorage.setItem('collectionOfBooks', JSON.stringify(collectionOfBooks));
   } else {
@@ -112,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     bookOnHtmlPage(collectionOfBooks);
   }
   removeFunction();
-  
   // Add a new book to the collection with title and author.
   document.querySelector('#submit-btn').addEventListener('click', (e) => {
     e.preventDefault();
