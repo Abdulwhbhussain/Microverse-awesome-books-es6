@@ -5,7 +5,7 @@ const listSection = () => {
   document.querySelector('#contact-link').style.textDecoration = 'none';
   document.querySelector('.book-form').style.display = 'none';
   document.querySelector('#contact-info').style.display = 'none';
-}
+};
 
 const addSection = () => {
   document.querySelector('#add-link').style.textDecoration = 'underline';
@@ -14,7 +14,7 @@ const addSection = () => {
   document.querySelector('#contact-link').style.textDecoration = 'none';
   document.querySelector('.book-list-container').style.display = 'none';
   document.querySelector('#contact-info').style.display = 'none';
-}
+};
 
 const contactSection = () => {
   document.querySelector('#contact-link').style.textDecoration = 'underline';
@@ -23,6 +23,6 @@ const contactSection = () => {
   document.querySelector('#add-link').style.textDecoration = 'none';
   document.querySelector('.book-list-container').style.display = 'none';
   document.querySelector('.book-form').style.display = 'none';
-}
+};
 
 export { listSection, addSection, contactSection };
