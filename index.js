@@ -44,8 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     completeDateAndTime += DateTime.now().c.hour > 12 ? 'pm' : 'am';
 
     document.getElementById('date-container').innerText = completeDateAndTime;
-  }, 1000);
-    
+  }, 1000);   
   document.querySelector('#list-link').style.textDecoration = 'underline';
   document.querySelector('.book-list-container').style.display = 'Block';
   document.querySelector('#add-link').style.textDecoration = 'none';
