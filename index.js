@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('date-container').innerText = completeDateAndTime;
   }, 1000);
-  
+    
   document.querySelector('#list-link').style.textDecoration = 'underline';
   document.querySelector('.book-list-container').style.display = 'Block';
   document.querySelector('#add-link').style.textDecoration = 'none';
