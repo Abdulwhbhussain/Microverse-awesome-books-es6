@@ -1,5 +1,5 @@
-// import { displayTime } from "./modules/display-time";
-import { DateTime } from './node_modules/luxon/src/luxon.js';
+import { displayTime } from './modules/display-time.js';
+import { listSection, addSection, contactSection } from './modules/sections.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // A collection that keeps a list of books.
@@ -7,77 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
   let collectionOfBooks = [];
 
   // Display Real-time Date and time on web page.
-  setInterval(() => {
-    let completeDateAndTime = '';
+  setInterval(displayTime, 1000);
+  
+  listSection();
 
-    const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  document.querySelector('#list-link').addEventListener('click', listSection);
 
-    completeDateAndTime += month[DateTime.now().c.month - 1];
-    completeDateAndTime += ' ';
-    if (DateTime.now().c.day > 3) {
-      completeDateAndTime += `${DateTime.now().c.day}th`;
-    }
-    if (DateTime.now().c.day === 3) {
-      completeDateAndTime += `${DateTime.now().c.day}rd`;
-    }
-    if (DateTime.now().c.day === 2) {
-      completeDateAndTime += `${DateTime.now().c.day}nd`;
-    }
-    if (DateTime.now().c.day === 1) {
-      completeDateAndTime += `${DateTime.now().c.day}st`;
-    }
-    completeDateAndTime += ' ';
-    completeDateAndTime += DateTime.now().c.year;
-    completeDateAndTime += ',  ';
-    completeDateAndTime += DateTime.now().c.hour;
-    completeDateAndTime += ':';
-    if (DateTime.now().c.minute < 10) {
-      completeDateAndTime += '0';
-    }
-    completeDateAndTime += DateTime.now().c.minute;
-    completeDateAndTime += ':';
-    if (DateTime.now().c.second < 10) {
-      completeDateAndTime += '0';
-    }
-    completeDateAndTime += DateTime.now().c.second;
-    completeDateAndTime += ' ';
-    completeDateAndTime += DateTime.now().c.hour > 12 ? 'pm' : 'am';
+  document.querySelector('#add-link').addEventListener('click', addSection);
 
-    document.getElementById('date-container').innerText = completeDateAndTime;
-  }, 1000);
-  document.querySelector('#list-link').style.textDecoration = 'underline';
-  document.querySelector('.book-list-container').style.display = 'Block';
-  document.querySelector('#add-link').style.textDecoration = 'none';
-  document.querySelector('#contact-link').style.textDecoration = 'none';
-  document.querySelector('.book-form').style.display = 'none';
-  document.querySelector('#contact-info').style.display = 'none';
-
-  document.querySelector('#list-link').addEventListener('click', () => {
-    document.querySelector('#list-link').style.textDecoration = 'underline';
-    document.querySelector('.book-list-container').style.display = 'Block';
-    document.querySelector('#add-link').style.textDecoration = 'none';
-    document.querySelector('#contact-link').style.textDecoration = 'none';
-    document.querySelector('.book-form').style.display = 'none';
-    document.querySelector('#contact-info').style.display = 'none';
-  });
-
-  document.querySelector('#add-link').addEventListener('click', () => {
-    document.querySelector('#add-link').style.textDecoration = 'underline';
-    document.querySelector('.book-form').style.display = 'flex';
-    document.querySelector('#list-link').style.textDecoration = 'none';
-    document.querySelector('#contact-link').style.textDecoration = 'none';
-    document.querySelector('.book-list-container').style.display = 'none';
-    document.querySelector('#contact-info').style.display = 'none';
-  });
-
-  document.querySelector('#contact-link').addEventListener('click', () => {
-    document.querySelector('#contact-link').style.textDecoration = 'underline';
-    document.querySelector('#contact-info').style.display = 'Block';
-    document.querySelector('#list-link').style.textDecoration = 'none';
-    document.querySelector('#add-link').style.textDecoration = 'none';
-    document.querySelector('.book-list-container').style.display = 'none';
-    document.querySelector('.book-form').style.display = 'none';
-  });
+  document.querySelector('#contact-link').addEventListener('click', contactSection);
 
   const bookOnHtmlPage = (books) => {
     books.forEach((book, id) => {
